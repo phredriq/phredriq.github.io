@@ -1,6 +1,6 @@
 $(document).ready(function(){
     // Kod i detta block körs när dokumentet laddats klart.   
     alert("hej"); 
-    $("#mainViewContainer").html($("#HomePage").html())
+    $("#mainViewContainer").html($("#homepage").html())
    
 })
