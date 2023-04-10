@@ -24,17 +24,20 @@
                 <button id="hamburger-button" class="w-2 p-10 text-3xl md:hidden cursor-pointer">
                     &#9776; 
                 </button>
+                <button id="menu-exit-button" class="w-2 p-10 text-5xl text-white md:hidden hidden">
+                    &times;               
+                    
+                </button>
                 <nav class="hidden md:block mx-11 space-x-20 text-xl " aria-label="main">
                     <a href="#" onclick="SwitchToAboutUs();event.preventDefault();" class="hover:opacity-90">Om Oss</a>
                     <a href="mailto:info@iskall.studio" class="hover:opacity-90">Kontakt</a>
                 </nav>
             </div>
         </section>
-        <section id="mobile-menu" class="absolute top-68  w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
-            <!--<button class="text-8xl text-white self-end px-6">
-                &times;
-            </button>-->
-            <nav class="flex text-white flex-col min-h-screen items-center py-8" aria-label="mobile">
+        <section id="mobile-menu" class="absolute top-0  w-full text-5xl flex-col items-center justify-content-center origin-top animate-open-menu hidden">
+            
+           
+            <nav class="flex text-white text-3xl flex-col min-h-screen items-center font-bold py-32" aria-label="mobile">
                 <a href="#" onclick="SwitchTohome();event.preventDefault();" class="w-full text-center py-6 hover:opacity-90" >Hem</a>
                 <a href="#" onclick="SwitchToAboutUs();event.preventDefault();" class="w-full text-center py-6 hover:opacity-90" >Om Oss</a>
                 <a href="mailto:info@iskall.studio"  class="w-full text-center py-6 hover:opacity-90" >Kontakt</a>
@@ -46,12 +49,12 @@
 
     <script id="homepage">
         <main class="md:w-4/5">
-            <section id="hero" class="items-center p-12 gap-8 mb-12">
+            <section id="hero" class="items-center p-12 gap-2 md:gap-8 mb-12">
                 <article class=" md:text-left text-center">
-                    <h2 class="text-3xl text-white font-bold sm:text-7xl ">
+                    <h2 class="text-3xl text-white font-bold md:text-7xl ">
                         Iskall Design Studio
                     </h2>
-                    <p class="text-3xl  my-4 md:w-3/5 text-white font-sans">
+                    <p class="text-xl w-60  mx-auto md:mx-0 md:text-3xl  my-4 md:w-4/5 lg:w-3/5 text-white font-sans">
                     Vi förverkligar dina visioner inom webbdesign, grafisk design och 3D-realisering
                     </p>
                     <button id="KontaktaOss" class="bg-[#D19e8e] hover:bg-blue-400 font-light text-xl text-white py-2 px-12  hover:border-blue-500 rounded-full">
@@ -103,7 +106,7 @@
     <div id="mainViewContainer" class="justify-center items-center flex flex-1" type="text/html">
 
     </div>
-    <footer class="flex pl-8 text-xl fixed bottom-0 text-white">
+    <footer class="flex pl-8 text-l fixed bottom-0 text-white">
         © 2022 All Rights Reserved.
     </footer>
 

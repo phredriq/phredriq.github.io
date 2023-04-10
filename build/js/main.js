@@ -21,19 +21,20 @@ const initApp = () => {
     const hamburgerBtn = document.getElementById('hamburger-button')
     const mobileMenu = document.getElementById('mobile-menu')
     const mainView = document.getElementById('mainViewContainer')
+    const exitBtn = document.getElementById('menu-exit-button')
 
     const toggleMenu = () => {
         mobileMenu.classList.toggle('hidden')
         mobileMenu.classList.toggle('flex')
         mainView.classList.toggle('hidden')
         mainView.classList.toggle('flex')
-    }
+        exitBtn.classList.toggle('flex')
+        exitBtn.classList.toggle('hidden')
+        hamburgerBtn.classList.toggle('flex')
+        hamburgerBtn.classList.toggle('hidden')
 
-    const toggleMainView = () => {
-        mainView.classList.toggle('hidden')
-        mainView.classList.toggle('flex')
-
     }
+  
 
     hamburgerBtn.addEventListener('click', toggleMenu)
     mobileMenu.addEventListener('click', toggleMenu)
