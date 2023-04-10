@@ -1,11 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ["./build/*.html"],
+  content: ["./build/*.html", "./build/js/*.js"],
   theme: {
     extend: {
-      backgroundImage: {
-        'hero' : "url ('build/img/Iskall1.png')",
+      screens: {
+        'widescreen': { 'raw': '(min-aspect-ratio: 3/2)' },
+        'tailscreeen':{'raw':'(min-aspect-ratio: 13/20)'},
+      },
+      keyframes: {
+        'open-menu': {
+          '0%' : { transform: 'scaleY(0)' }, 
+          '80%' : { transform: 'scaleY(1.2)' }, 
+          '100%' : { transform: 'scaleY(1)' }, 
+        },
+      },
+     animation: {
+      'open-menu' : 'open-menu 0.5s ease-in-out forwards',
+     }
       },
       fontFamily: {
         sans: [
@@ -13,7 +25,7 @@ module.exports = {
         ]
       }
       
-    },
+   
   },
   plugins: [],
 }

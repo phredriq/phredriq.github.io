@@ -13,7 +13,7 @@
 <body id="bodyelement" class="min-h-screen  min-w-screen bg-cover bg-center bg-no-repeat flex flex-col"
     style="background-image: url('img/iskallnew.png')">
     <header class="" text-blue-300 sticky top-0 z-10">
-        <section class="max-w-full justify-between text-white items-center mx-auto sm:mx-8 px-4 flex">
+        <section class="max-w-full justify-between text-white items-center mx-auto sm:mx-8 ps-4 flex">
             <h1 class="text-3xl font-medium font-sans">
                 <a href="#" onclick="SwitchTohome();event.preventDefault();">
                     <img class="w-36" src="img/Logo.png" alt="Your image">
@@ -21,26 +21,38 @@
                 </a>
             </h1>
             <div>
-                <button id="mobile-open-button" class="w-2 pt-6 text-3xl sm:hidden focus:outline-none">
-                    &#9776;
+                <button id="hamburger-button" class="w-2 p-10 text-3xl md:hidden cursor-pointer">
+                    &#9776; 
                 </button>
-                <nav class="hidden sm:block mx-11 space-x-20 text-xl " aria-label="main">
+                <nav class="hidden md:block mx-11 space-x-20 text-xl " aria-label="main">
                     <a href="#" onclick="SwitchToAboutUs();event.preventDefault();" class="hover:opacity-90">Om Oss</a>
-                    <a href="Kontakt" class="hover:opacity-90">Kontakt</a>
+                    <a href="mailto:info@iskall.studio" class="hover:opacity-90">Kontakt</a>
                 </nav>
             </div>
+        </section>
+        <section id="mobile-menu" class="absolute top-68  w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
+            <!--<button class="text-8xl text-white self-end px-6">
+                &times;
+            </button>-->
+            <nav class="flex text-white flex-col min-h-screen items-center py-8" aria-label="mobile">
+                <a href="#" onclick="SwitchTohome();event.preventDefault();" class="w-full text-center py-6 hover:opacity-90" >Hem</a>
+                <a href="#" onclick="SwitchToAboutUs();event.preventDefault();" class="w-full text-center py-6 hover:opacity-90" >Om Oss</a>
+                <a href="mailto:info@iskall.studio"  class="w-full text-center py-6 hover:opacity-90" >Kontakt</a>
+                
+
+            </nav>
         </section>
     </header>
 
     <script id="homepage">
         <main class="md:w-4/5">
-            <section id="hero" class="items-center gap-8 mb-12">
+            <section id="hero" class="items-center p-12 gap-8 mb-12">
                 <article class=" md:text-left text-center">
                     <h2 class="text-3xl text-white font-bold sm:text-7xl ">
                         Iskall Design Studio
                     </h2>
                     <p class="text-3xl  my-4 md:w-3/5 text-white font-sans">
-                        Vi förverkligar dina visioner inom webbdesign, grafisk design och 3D-realisering
+                    Vi förverkligar dina visioner inom webbdesign, grafisk design och 3D-realisering
                     </p>
                     <button id="KontaktaOss" class="bg-[#D19e8e] hover:bg-blue-400 font-light text-xl text-white py-2 px-12  hover:border-blue-500 rounded-full">
                         Kontakta Oss
@@ -54,29 +66,29 @@
 
 
     <script id="omoss" type="text/html">
-            <main class="mx-auto md:text-left w-3/5 lg:w-3/5 pb-24 text-white">
-                <section class="flex flex-col w-2/3">
-                    <article class="text-left">
-                <h2 class="text-6xl font-bold sm:text-6xl ">
+            <main class="mx-auto text-center md:text-left w-5/6 lg:w-3/5 pb-24 text-white">
+                <section class="flex flex-col md:w-3/5 ">
+                    <article class="">
+                <h2 class="text-3xl font-bold sm:text-6xl ">
                     ISKALL
                 </h2>
-                <p class="text-xl mt-4 font-sans">
+                <p class="text-sm sm:text-xl mt-4 font-sans">
                     I vår lilla designstudio specialiserar vi oss på att skapa fantastiska webbplatser, grafisk design
                     och 3D-visualiseringar. Vårt team av erfarna och begåvade designers är dedikerade till att hjälpa
                     företag och organisationer att förverkliga sina idéer.
                 </p>
-                <p class="text-xl mt-4 font-sans py-2">
+                <p class="text-sm sm:text-xl mt-4 font-sans py-2">
                     Vi tror att bra design är avgörande för att lyckas på dagens konkurrensutsatta marknad. Därför
                     använder vi den senaste tekniken för att skapa unik, engagerande och effektiv design som hjälper
                     våra kunder att sticka ut från mängden.
                 </p>
-                <p class="text-xl mt-4 font-sans py-2">
+                <p class="text-sm sm:text-xl mt-4 font-sans py-2">
                     Med vår expertis inom webbdesign, grafisk design och 3D-visualisering kan vi hjälpa dig att skapa en
                     kraftfull och sammanhängande varumärkesidentitet som ger gensvar hos din publik. Oavsett om du
                     behöver en ny webbplats, en uppsättning marknadsföringsmaterial eller en 3D-modell för en
                     produktlansering är vi här för att hjälpa dig.
                 </p>
-                <p class="text-xl mt-4 font-sans py-2">
+                <p class="text-sm sm:text-xl mt-4 font-sans py-2">
                     Kontakta oss idag för att få veta mer om hur vi kan hjälpa dig att lyckas med våra designtjänster.
                     Vi ser fram emot att arbeta med dig.
                 </p>
